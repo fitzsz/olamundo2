@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dr. Mundo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        font-family: "Bebas Neue", serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      #foto-mundo{
+        width: 800px;
+        margin-top: 12px;
+        display:none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Olá Dr. Mundo</h1>
+
+    <p>Mundo quer saber seu nome</p>
+    <input type="text" id="nome" />
+    <button type="button" id="btn">salvar</button>
+    <div id="respostas"></div>
+    <img id="foto-mundo" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/b37b3fec-4640-40af-9505-6c6cf67c4c5a/dekbjxl-f4912742-af1f-4fea-91bb-bc21ffc9de90.png/v1/fill/w_1192,h_670/dr_mundo_by_uhmtaongon_dekbjxl-pre.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzIwIiwicGF0aCI6IlwvZlwvYjM3YjNmZWMtNDY0MC00MGFmLTk1MDUtNmM2Y2Y2N2M0YzVhXC9kZWtianhsLWY0OTEyNzQyLWFmMWYtNGZlYS05MWJiLWJjMjFmZmM5ZGU5MC5wbmciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.BQKY5Jlx5m00SF5n9EGq7z5LmQAl8KZkPDww1R-fgsE">
+
+    <script>
+      var nameInput = document.getElementById("nome");
+      var button = document.getElementById("btn");
+      var respostaDiv = document.getElementById("respostas");
+      var name = ""; 
+      var mundoImg = document.getElementById("foto-mundo")
+
+      button.addEventListener("click", () => {
+        if (name != "") {
+          respostaDiv.textContent = "OLÁ " + name;
+          mundoImg.style.display = "block"
+        }
+      });
+
+      nameInput.addEventListener("change", (ev) => {
+        name = ev.target.value;
+      });
+    </script>
+  </body>
+</html>
